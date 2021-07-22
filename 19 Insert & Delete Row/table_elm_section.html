@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" id="mytab">
+      <caption>My Table Caption</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody id="mytbody">
+        <tr>
+          <td>11</td>
+          <td>Swornim</td>
+          <td>JavaScript</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Sunim</td>
+          <td>Laravel</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>13</td>
+          <td>Maichyang</td>
+          <td>PHP</td>
+        </tr>
+      </tfoot>
+    <script>
+      var tbody = document.getElementById("mytbody");
+
+      // rows
+      // var ro = tbody.rows;
+      // ro[1].innerHTML = "<td>12</td><td>Jyoti</td><td>Python</td>";
+      // console.log(ro[0]);
+
+      // Insert Row Method
+      var row = tbody.insertRow(-1);
+      row.insertCell().textContent = "New text data";
+      console.log(row);
+
+      // Delete Row
+
+    </script>
+  </body>
+</html>

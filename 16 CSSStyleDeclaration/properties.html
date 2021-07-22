@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="myp" style="background-color: green; color:yellow;">Paragraph</p>
+
+    <script>
+      var p = document.getElementById("myp");
+      var cs = p.style;
+      cs.cssText = "font-size: 70px; color: blue;";
+      console.log(p);
+      console.log(cs.length);
+      console.log(cs.item(1));
+      console.log(cs[0]);
+      console.log(cs.getPropertyValue('color'));
+      console.log(cs.removeProperty('color'));
+      cs.setProperty('background-color', 'grey', 'important');
+      console.log(cs.getPropertyPriority('background-color'));
+    </script>
+  </body>
+</html>

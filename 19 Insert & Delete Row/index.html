@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" id="mytab">
+      <caption>My Table Caption</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11</td>
+          <td>Swornim</td>
+          <td>JavaScript</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Sunim</td>
+          <td>Laravel</td>
+        </tr>
+      </tbody>
+      <tfoot>
+
+      </tfoot>
+    <script>
+      var table = document.getElementById("mytab");
+
+      // Insert Row
+      var row = table.insertRow(2);
+      row.insertCell(0).textContent = "13";
+      row.insertCell(1).textContent = "Maichyang";
+      row.insertCell(2).textContent = "PHP";
+
+      // Delete Row
+      table.deleteRow(-1);
+      console.log(row);
+    </script>
+  </body>
+</html>

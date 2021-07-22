@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style media="screen">
+      .myclass1{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myp" class="myclass1" style="background-color: yellowgreen;">Paragraph</p>
+
+    <script>
+      var p = document.getElementById("myp");
+      var allCssProp = window.getComputedStyle(p);
+
+      var cs = p.style;
+      cs.fontSize = "50px";
+      console.log(p);
+      // console.log(allCssProp);
+    </script>
+  </body>
+</html>

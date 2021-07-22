@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myid">
+      <h1>We are learning JavaScript</h1>
+    </div>
+
+    <script>
+      // Access div section in targetNode
+      var targetNode = document.getElementById("myid");
+
+      // Creating and Append New Text Node to New Element Node (h2)
+      nENode = document.createElement('h2');
+      targetNode.appendChild(nENode);
+      nENode.appendChild(document.createTextNode("Text Created by JavaScript"));
+
+      // Creating & Append a New Comment Node in h2 node
+      nENode.appendChild(document.createComment("Comment by JavaScript"));
+
+      console.log(targetNode);
+    </script>
+  </body>
+</html>

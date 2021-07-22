@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="myp" class="myclass">Paragraph</p>
+
+    <script>
+      var p = document.getElementById("myp");
+      p.setAttribute('class', 'btn btn-primary');
+      // p.className = 'btn btn-success';
+      // set new attributes
+      p.setAttribute('title', 'mytitle');
+      p.style.fontStyle = 'italic';
+      var getAtr = p.getAttribute('id');
+      // p.id
+      console.log(getAtr);
+      console.log(p);
+    </script>
+  </body>
+</html>

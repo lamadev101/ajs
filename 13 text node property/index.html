@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="myh2">Hello World</h2>
+    <script>
+      var h = document.getElementById("myh2").firstChild;
+      // textNode.length
+      var result = h.length;
+
+      //textNode.data
+      // var result = h.data;
+      // h.data = "I am new textData.";
+
+      //textNode.appendData
+      h.appendData("! How are you?")
+
+      // textNode.deleteData(str, length)
+      h.deleteData(0, 13);
+
+      // textNode.insertData(start, str)
+      h.insertData(0, "Hey! ");
+
+      // textNode.replaceData(start, length, str)
+      h.replaceData(0, 4, "Bey");
+
+      // textNode.splitText(position)
+      var rightside = h.splitText(3);
+      // console.log(rightside);
+      // console.log(document.getElementById("myh2").childNodes);
+
+      // textNode.substringData(start, length)
+      var result = h.substringData(0, 7);
+      console.log(result);
+    </script>
+  </body>
+</html>

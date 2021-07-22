@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Event Methods stopPropagation and stopImmediatePropagation</h1>
+  <div id="one">1
+    <div id="two">2
+      <div id="three">3
+        <div id="four">4</div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function div1(e) {
+    this.style.backgroundColor = 'red';
+  }
+  function div2(e) {
+    this.style.backgroundColor = 'blue';
+    e.stopImmediatePropagation();
+  }
+  function div2_1(e) {
+    this.style.width = '250px';
+  }
+  function div3(e) {
+    this.style.backgroundColor = 'yellow';
+  }
+  function div4(e) {
+    this.style.backgroundColor = 'black';
+    e.stopPropagation();
+  }
+  var divone = document.getElementById("one");
+  divone.addEventListener("click", div1, false);
+  var divtwo = document.getElementById("two");
+  divtwo.addEventListener("click", div2, false);
+  divtwo.addEventListener("click", div2_1, false);
+  var divthree = document.getElementById("three");
+  divthree.addEventListener("click", div3, false);
+  var divfour = document.getElementById("four");
+  divfour.addEventListener("click", div4, false);
+
+</script>
+</html>

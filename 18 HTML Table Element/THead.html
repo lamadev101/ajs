@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" id="mytab">
+      <caption>My Table Caption</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11</td>
+          <td>Swornim</td>
+          <td>JavaScript</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Sunim</td>
+          <td>Laravel</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>13</td>
+          <td>Swstika</td>
+          <td>PHP</td>
+        </tr>
+      </tfoot>
+    <script>
+      var table = document.getElementById("mytab");
+
+      // createTHead()
+      var thed = table.createTHead();
+      // thed.innerHTML = "<tr><th>SN.</th><th>Student</th><th>Course</th></tr>"
+      console.log(thed);
+
+      // deleteTHead();
+      table.deleteTHead();
+
+    </script>
+  </body>
+</html>

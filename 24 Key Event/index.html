@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>key events</title>
+</head>
+<body>
+  <h1>Key Events</h1>
+  Name: <input type="text" id="mytxt">
+
+  <script>
+    var txt = document.getElementById("mytxt");
+    function ke(e){
+      console.log(e.type + '  ' + e.keyCode + '  ' + String.fromCharCode(e.keyCode));
+    }
+    txt.addEventListener('keydown', ke, false);
+    txt.addEventListener('keypress', ke, false);
+    txt.addEventListener('keyup', ke, false);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" id="mytab">
+      <caption>My Table Caption</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody id="mytbody">
+        <tr>
+          <td>11</td>
+          <td>Swornim</td>
+          <td id="myid">JavaScript</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Sunim</td>
+          <td>Laravel</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>13</td>
+          <td>Maichyang</td>
+          <td>PHP</td>
+        </tr>
+      </tfoot>
+    <script>
+      var table = document.getElementById("mytab");
+      var myrow = table.rows;
+
+      console.log(myrow[1].cells.length);
+
+      console.log(myrow[1].cells[2]);
+      console.log(myrow[1].cells.item(2));
+      console.log(myrow[1].cells.namedItem("myid"));
+
+      myrow[2].cells[2].innerHTML = "Django";
+      console.log(myrow[2].cells[2].innerHTML);
+
+      // insert new cell
+      var mycell1 = myrow[0].insertCell(3);
+      mycell1.innerHTML = "Email";
+      var mycell2 = myrow[1].insertCell(3);
+      mycell2.textContent = "abc@gmail.com";
+
+      // delete existing cell
+      myrow[0].deleteCell(3);
+    </script>
+  </body>
+</html>

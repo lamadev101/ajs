@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Remove Event Listener</h1>
+  <button id="mybtn">Click Me</button>
+</body>
+<script>
+  function show1(){
+    alert("Button Clicked1 !");
+  }
+  var btn = document.getElementById("mybtn");
+  btn.addEventListener("click", show1, false);
+  btn.addEventListener("click", show1, true);
+
+  btn.removeEventListener("click", show1, true);
+
+
+</script>
+</html>

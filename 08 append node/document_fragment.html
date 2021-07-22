@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myid">
+      <h1>We are learning JavaScript</h1>
+      <p>This is paragraph.</p>
+    </div>
+
+    <script>
+      // Creating and Appending a New h2 Element
+      var hNode = document.createElement('h2');
+
+      // Creating and Appending a New p Element
+      var pNode = document.createElement('p');
+
+      // Text for New h2 and p Element
+      hNode.textContent = "Header Node form JS";
+      pNode.textContent = "Paragraph Node form JS";
+
+      // Creating Empty Document Fragment
+      var df = document.createDocumentFragment();
+      df.appendChild(hNode);
+      df.appendChild(pNode);
+
+      // Append document Fragment in active document
+      var targetNode = document.getElementById("myid");
+      targetNode.appendChild(df)
+      console.log(targetNode);
+
+      console.log(df);
+    </script>
+  </body>
+</html>

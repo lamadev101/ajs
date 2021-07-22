@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tree</title>
+</head>
+<body>
+    <h1 id="show">We are Learning Advanced JavaScript</h1>
+    <h2>We are expert in JS</h2>
+    <p id="hello">
+      Hello World
+      <span>Hello Swornim</span>
+      <em>Hey Budy</em>
+      <span>Bye</span>
+    </p>
+    <p id="find">
+      Bye Swornim
+      <span>Hello Swornim</span>
+      <em>Hey Budy</em>
+      <span>Bye</span>
+      <p>No no no</p>
+    </p>
+    <script>
+        // More Specific
+        /* var results = document.getElementById("hello");
+        var result = results.getElementsByTagName("span"); */
+
+        // Short form:
+        var result = document.getElementById("find").getElementsByTagName("span");
+
+        document.write(result);
+        console.log(result);
+    </script>
+</body>
+</html>

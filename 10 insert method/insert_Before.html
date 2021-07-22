@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myid">
+      <h3>JS Framework</h3>
+      <ul id="myul">
+        <li>jQuery</li>
+        <li id="myang">Angular JS</li>
+        <li>React JS</li>
+        <li id="myd3">D3 JS</li>
+      </ul>
+
+      <h3>Top most Programming languages</h3>
+      <ul>
+        <li id="myc">C++ Programming</li>
+        <li>Python Programming</li>
+        <li>Java Programming</li>
+      </ul>
+    </div>
+
+    <script>
+      // ***** When insert new node ****
+      // Creating new li node and add text
+      newNode = document.createElement("li");
+      newNode.textContent="Backbone JS";
+
+      // Adding new node in target node ul
+          // At specific position
+      // document.getElementById("myul").insertBefore(newNode, document.getElementById("myang"));
+          // Default position (last)
+      document.getElementById("myul").insertBefore(newNode, null);
+
+      // **** When insert existing node ****
+      document.getElementById("myul").insertBefore(document.getElementById("myd3"),  document.getElementById("myang"));
+
+      // **** When node insert from out of parent node
+      document.getElementById("myul").insertBefore(document.getElementById("myc"),  document.getElementById("myang"));
+
+    </script>
+  </body>
+</html>

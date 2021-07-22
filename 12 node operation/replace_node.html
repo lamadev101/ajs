@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Original Content</h3>
+    <ul id="myul">
+      <li>Item 1</li>
+      <li id="itm2">Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <span id="myspan">Span</span>
+    <script>
+      // parentNode.replaceChild(newChild, oldChild)
+      var u = document.getElementById("myul");
+
+      // Replace with new node
+      // var nNode = document.createElement("li");
+      // nNode.textContent = "Item N";
+      // u.replaceChild(nNode, document.getElementById("itm2"));
+
+      // Replace with existing node
+      var replacedNode = u.replaceChild(document.getElementById("myspan"), document.getElementById("itm2"));
+
+      // Checking which node is replaced or not
+      console.log(replacedNode);
+    </script>
+  </body>
+</html>

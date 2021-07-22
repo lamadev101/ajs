@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style media="screen">
+      .myclass1{
+        background-color: blue;
+        color: white;
+      }
+      .myclass2{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myp" class="myclass2 myclass1" style="color:pink;">Paragraph</p>
+
+    <script>
+      var p = document.getElementById("myp");
+      var elmClass = p.classList;
+      console.log(elmClass);
+      // find the value of class
+      console.log(elmClass.value);
+      // find vlaue of class useing itme
+      console.log(elmClass.item(1));
+      // add single or multiple classes
+      elmClass.add("myclass3", "myclass4", "myclass5");
+      // remove class
+      elmClass.remove("myclass1");
+      // replace class
+      elmClass.replace("myclass2", "myclass1");
+      // check encounter class exist or not
+      console.log(elmClass.contains("myclass7"));
+      // if value not exist then add else remove
+      elmClass.toggle("myclass1");
+      // find the length of class
+      console.log(elmClass.length);
+    </script>
+  </body>
+</html>

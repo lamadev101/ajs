@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Event Handling with JavaScript</h1>
+  <button id="mybtn">Click Me</button>
+</body>
+<script>
+  // With Anonymous function
+  document.getElementById("mybtn").onclick = function (){alert("Button clicked!");};
+
+  // With function
+  function disp(){
+    alert("Button clicked clicked!");
+  }
+  document.getElementById("mybtn").onclick = disp;
+</script>
+</html>

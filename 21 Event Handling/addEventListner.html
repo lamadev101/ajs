@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Add Event Listener</h1>
+  <button id="mybtn">Click Me</button>
+  <button id="btn-hover">Hover Me</button>
+
+  <h1>Add Event Listener with multiple Event Handler</h1>
+  <button id="btn-mult">click Me</button>
+</body>
+<script>
+  document.getElementById("mybtn").addEventListener("click", function(){alert("button clicked!");});
+
+  function show(){
+    alert("Thanks for hover!");
+  }
+  document.getElementById("btn-hover").addEventListener("mouseover", show);
+
+  function show1(){
+    alert("Button Clicked1 !");
+  }
+  function show2(){
+    alert("Button Clicked2 !");
+  }
+  var btn = document.getElementById("btn-mult");
+  btn.addEventListener("click", show1);
+  btn.addEventListener("click", show2);
+</script>
+</html>

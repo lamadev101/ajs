@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tree</title>
+</head>
+<body>
+  <h1 id="myid" class="myclass">We are Learning JS <!-- This is comment --></h1>
+  <p id="myid1">I am paragraph</p>
+
+  <script type="text/javascript">
+  // Note: nodeValue and nodeName depricated by value and name respectively.
+
+    // Atrribute Properties -name, value
+    var result = document.getElementById("myid");
+    document.write(result.attributes[0].nodeName + "=");
+    document.write(result.attributes[0].nodeValue + "<br>");
+    document.write(result.attributes[1].name + "=");
+    document.write(result.attributes[1].value + "<br>");
+
+    document.write(result.attributes.length);
+  </script>
+</body>
+</html>

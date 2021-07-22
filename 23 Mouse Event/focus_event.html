@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Mouse Event Apply</h1>
+  Name: <input type="text" id="mytxt">
+
+  <script>
+    var txt = document.getElementById("mytxt");
+    function fe(){
+      txt.style.backgroundColor = 'skyblue';
+    }
+    function be(){
+      txt.style.backgroundColor = 'white';
+    }
+
+    // txt.addEventListener('focus', fe);
+    // txt.addEventListener('blur', be);
+
+    txt.addEventListener('focusin', fe);
+    txt.addEventListener('focusout', be);
+  </script>
+</body>
+
+</html>

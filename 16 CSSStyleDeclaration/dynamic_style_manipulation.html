@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style media="screen">
+      .myclass1{
+        background-color: blue;
+        color: white;
+      }
+      .myclass2{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myp" class="myclass2" style="color:pink;">Paragraph</p>
+
+    <script>
+      var p = document.getElementById("myp");
+      p.className = "myclass1";
+      console.log(p);
+    </script>
+  </body>
+</html>

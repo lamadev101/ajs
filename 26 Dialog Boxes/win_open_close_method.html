@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>open_method</title>
+</head>
+<body>
+  <h1>Window Open and Close methods</h1>
+  <button type="button" name="button" id="btn">Close new Window</button>
+  <script>
+    var newWindow = window.open("https://www.twitter.com", "_blank", "height=400, width=600");
+
+    function win(){
+      newWindow.document.close();
+      newWindow.close();
+    }
+    document.getElementById("btn").addEventListener("click", win);
+  </script>
+</body>
+
+</html>

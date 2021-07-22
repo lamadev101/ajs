@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Mouse Event Apply</h1>
+  Name: <input type="text" id="mytxt">
+  <script>
+    var txt = document.getElementById("mytxt");
+    function changeColorOrange(e) {
+      txt.style.backgroundColor = 'orange';
+    }
+    function changeColorWhite(e) {
+      txt.style.backgroundColor = 'white';
+    }
+    // txt.addEventListener("mouseover", changeColorOrange, false);
+    // txt.addEventListener("mouseout", changeColorWhite, false);
+
+    txt.addEventListener("mouseenter", changeColorOrange, false);
+    txt.addEventListener("mouseleave", changeColorWhite, false);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myid">
+      <h1>We are learning JavaScript</h1>
+      <p>This is paragraph.</p>
+    </div>
+
+    <script>
+      // Append document Fragment in active document
+      var targetNode = document.getElementById("myid");
+
+      // Creating and Append New Text
+      targetNode.appendChild(document.createTextNode("Hello "));
+      targetNode.appendChild(document.createTextNode("I'm "));
+      targetNode.appendChild(document.createTextNode("Swornim "));
+      targetNode.appendChild(document.createTextNode("Karma."));
+
+      targetNode.normalize();
+
+      console.log(targetNode.childNodes);
+      console.log(targetNode);
+    </script>
+  </body>
+</html>

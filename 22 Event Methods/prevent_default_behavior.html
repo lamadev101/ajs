@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Prevent Element Default Behavior</h1>
+  <div id="mydiv">
+    <a href="http://www.google.com" id="mylink">Click and Open Google</a>
+  </div>
+
+</body>
+<script>
+  function stoplink(e) {
+    e.preventDefault();
+  }
+  var link = document.getElementById("mylink");
+  link.addEventListener("click", stoplink, false);
+</script>
+</html>

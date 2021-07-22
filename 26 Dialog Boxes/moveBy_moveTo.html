@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>open_method</title>
+</head>
+<body>
+  <h1>Moving window using moveBy and moveTo method</h1>
+
+  <button type="button" name="button" id="btn-open">Open Window</button>
+  <button type="button" name="button" id="btn-moveby">Move By</button>
+  <button type="button" name="button" id="btn-moveto">Move To</button>
+  <script>
+    var newWindow;
+    function openwin(){
+      newWindow = window.open("", "_blank", "width=300, height=200");
+      newWindow.document.write("I'm new window!");
+    }
+    function movebyWin(){
+      newWindow.moveBy(100, 100);
+      newWindow.focus();
+    }
+    function movetoWin(){
+      newWindow.moveTo(300, 200);
+      newWindow.focus();
+    }
+
+    document.getElementById("btn-open").addEventListener("click", openwin);
+    document.getElementById("btn-moveby").addEventListener("click", movebyWin);
+    document.getElementById("btn-moveto").addEventListener("click",movetoWin);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title class="geek">Tree</title>
+</head>
+<body>
+    <h1 class="geek myclass">We are Learning Advanced JS</h1>
+    <p id="show2">Hello</p>
+    <p class="myclass">world</p>
+    <div id="show1">
+      <p>1st p inside div</p>
+      <p class="geek">
+        <span class="myspan">2nd p inside div</span>
+      </p>
+      <p class="geek">
+        <small id="sm">3rd p inside div</small>
+      </p>
+    </div>
+    <div id="show">I'm somthing div</div>
+
+    <script>
+      // More specific
+      var data = document.getElementById("show1");
+      var result = data.querySelectorAll(".geek > span.myspan");
+
+      var result = document.querySelectorAll("#show1 > .geek > small#sm");
+      document.write(result);
+      console.log(result);
+    </script>
+</body>
+</html>

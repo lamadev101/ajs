@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resize Window</title>
+</head>
+<body>
+  <h1>Resize window using sizeBy and sizeTo method</h1>
+
+  <button type="button" name="button" id="btn-open">Open Window</button>
+  <button type="button" name="button" id="btn-sizeby">Resize By</button>
+  <button type="button" name="button" id="btn-sizeto">Resize To</button>
+  <script>
+    var newWindow;
+    function openwin(){
+      newWindow = window.open("", "_blank", "width=300, height=200");
+      newWindow.document.write("I'm new window!");
+    }
+    function sizebyWin(){
+      newWindow.resizeBy(100, 100);
+      newWindow.focus();
+    }
+    function sizetoWin(){
+      newWindow.resizeTo(300, 200);
+      newWindow.focus();
+    }
+
+    document.getElementById("btn-open").addEventListener("click", openwin);
+    document.getElementById("btn-sizeby").addEventListener("click", sizebyWin);
+    document.getElementById("btn-sizeto").addEventListener("click", sizetoWin);
+  </script>
+</body>
+
+</html>

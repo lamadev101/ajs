@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myid">
+      <h1>We are learning JavaScript</h1>
+      <p>This is paragraph.</p>
+    </div>
+
+    <script>
+      // Creating and Appending a New h2 Element
+      // var nENode = document.createElement('h2');
+      var targetNode = document.getElementById("myid");
+      // targetNode.appendChild(nENode)
+      targetNode.appendChild(document.createElement('h2'));
+      console.log(targetNode);
+
+      // Creating a New text node
+      var nTNode = document.createTextNode("Text Created by JavaScript");
+      targetNode.appendChild(nTNode);
+
+      // Creating a New Comment Node
+      var nCNode = document.createComment("Comment by JavaScript");
+      targetNode.appendChild(nCNode)
+
+    </script>
+  </body>
+</html>
